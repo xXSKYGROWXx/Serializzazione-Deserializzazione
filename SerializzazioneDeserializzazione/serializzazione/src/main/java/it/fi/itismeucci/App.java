@@ -2,7 +2,7 @@ package it.fi.itismeucci;
 
 import java.io.File;
 import java.util.*;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class App
 {
@@ -20,9 +20,9 @@ public class App
         lista.add(Nencioni);
 
         Classe CIA = new Classe(5, "C", "IA", lista);
-        XmlMapper xmlMapper = new XmlMapper();
-        try{
-            xmlMapper.writeValue(new File("classe.xml"), CIA);
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            objectMapper.writeValue(new File("classe.json"), CIA);
         } catch (Exception e) {
             //TODO: handle exception
         }
