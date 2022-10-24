@@ -22,7 +22,10 @@ public class App
         Classe CIA = new Classe(5, "C", "IA", lista);
         XmlMapper xmlMapper = new XmlMapper();
         try{
-            xmlMapper.writeValue(new File("classe.xml"), CIA);
+            String xml = xmlMapper.writeValueAsString(CIA);
+            System.out.println("--------");
+            Classe c2 = xmlMapper.readValue(xml, Classe.class);
+            System.out.println(c2.getAula());
         } catch (Exception e) {
             //TODO: handle exception
         }

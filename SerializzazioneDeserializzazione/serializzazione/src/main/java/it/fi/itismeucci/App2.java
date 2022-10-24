@@ -7,6 +7,7 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 public class App2 {
     public static void main( String[] args )
     {
+        /*
         XmlMapper xmlMapper = new XmlMapper();
         try {
             System.out.println("--------");
@@ -17,7 +18,7 @@ public class App2 {
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
-
+        */
         }
     }
 }
